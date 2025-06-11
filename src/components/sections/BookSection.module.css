@@ -1,0 +1,80 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3rem;
+  margin-top: 9rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-family: 'pretendard';
+  font-weight: 200;
+  margin-left: 0rem;
+}
+
+.bookImage {
+  width: 350px;
+  height: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.right {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+   margin-top: 9rem;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center; /* 중앙 정렬 추가 */
+}
+
+.quoteWrapper {
+  cursor: pointer;
+}
+
+.quote {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s;
+  color: #dfdfdf;
+  text-align: center;
+}
+
+.underline {
+  height: 1px;
+  background-color: #dfdfdf;
+  width: 400px;
+  transition: background-color 0.3s;
+  margin: 0 auto; /* 중앙 정렬을 위한 마진 추가 */
+}
+
+.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.activeUnderline {
+  background-color: #ffffff;
+}
+
+

@@ -1,0 +1,106 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  font-family: "Pretendard";
+  color: white;
+  overflow: hidden;
+}
+
+
+.dotContainer {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.2rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: #ffffff;
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
+/* 좌측 하단 텍스트 묶음 */
+.leftInfo {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0rem;
+}
+
+.temp {
+  font-size: 12rem;
+  font-weight: 800; /* ExtraBold */
+  margin-bottom: 0.1rem;
+}
+
+.location {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-top: 0rem;
+  margin-bottom: 0.3rem;
+}
+
+.date {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+/* 우측 하단 텍스트 묶음 */
+.bottomInfo {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 3rem;
+  font-weight: 200; /* ExtraLight */
+  line-height: 1.2;
+}
+
+.weather {
+  text-transform: uppercase;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .section {
+    height: 220px;
+  }
+
+  .temp {
+    font-size: 1.4rem;
+  }
+
+  .location,
+  .date,
+  .bottomInfo {
+    font-size: 0.9rem;
+  }
+
+  .leftInfo,
+  .bottomInfo {
+    gap: 0.2rem;
+  }
+}
+

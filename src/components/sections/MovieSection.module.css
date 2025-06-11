@@ -1,0 +1,87 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  position: relative;
+}
+
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-family: 'pretendard';
+  font-weight: 200;
+  margin-left: 0rem;
+}
+
+.textBox {
+  margin-left: 0rem;
+}
+
+.textBox h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'pretendard';
+  font-weight: 400;
+}
+
+.textBox p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: 'pretendard';
+  font-weight: 200;
+}
+
+.right {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.poster {
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-origin: center;
+}
+
+.center {
+  width: 200px;
+  height: 300px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.center:hover {
+  transform: scale(1.05);
+}
+
+.side {
+  width: 100px;
+  height: 200px;
+  opacity: 0.3;
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+
+
+
+
+

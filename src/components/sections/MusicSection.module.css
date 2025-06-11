@@ -1,0 +1,103 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ 왼쪽 정렬 */
+  margin-left: 1rem;       /* ✅ 더 왼쪽으로 */
+  margin-top: 12rem;
+}
+
+.right {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;    /* ✅ 이미지 + 버튼 수직 정렬 */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 1rem;
+  font-family: 'pretendard';
+  font-weight: 200;
+  margin-left: 0rem;
+}
+
+.trackList {
+  list-style: none;
+  padding: 0;
+}
+
+.track {
+  font-family: 'pretendard';
+  font-weight: 200;
+  font-size: 3rem;        /* ✅ 크기 증가 */
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.track:hover {
+  color: #888;
+}
+
+.active {
+  font-weight: bold;
+  font-family: 'pretendard';
+  font-size: 4rem;
+}
+
+.albumImage {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  position: relative;
+
+  /* ✅ 중앙 투명 마스크 적용 */
+  -webkit-mask-image: radial-gradient(circle 40px at center, transparent 0, transparent 40px, black 41px);
+  mask-image: radial-gradient(circle 40px at center, transparent 0, transparent 40px, black 41px);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0;            /* ✅ 이미지 바로 아래 붙도록 */
+}
+
+.controls button {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
